@@ -1,0 +1,16 @@
+{
+    "weights": [
+        0.07259817507803279,
+        0.16611773845492975,
+        0.1286111043861342,
+        0.06973389316074041
+    ],
+    "bias": -0.2534945026128798,
+    "n_inputs": 4,
+    "normalization_params": {
+        "min": [],
+        "max": []
+    },
+    "algorithm": "perceptron",
+    "normalize": true
+}

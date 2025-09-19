@@ -1,0 +1,15 @@
+{
+    "weights": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "bias": 0.0,
+    "n_inputs": 3,
+    "normalization_params": {
+        "min": [],
+        "max": []
+    },
+    "algorithm": "perceptron",
+    "normalize": true
+}

@@ -9,6 +9,7 @@ class Perceptron:
     """
     def __init__(self, n_inputs):
         self.n_inputs = n_inputs
+        # Inicializar con n_inputs pesos (uno por cada entrada)
         self.weights = np.zeros(n_inputs, dtype=float)
         self.bias = 0.0
         # scaler for optional normalization
@@ -33,9 +34,10 @@ class Perceptron:
         if weights is not None:
             w = np.array(weights, dtype=float)
             if w.shape[0] != self.n_inputs:
-                raise ValueError("Número de pesos no coincide con número de entradas")
+                raise ValueError(f"Número de pesos ({w.shape[0]}) no coincide con número de entradas ({self.n_inputs})")
             self.weights = w
         elif random_init:
+            # Inicializar n_inputs pesos aleatorios (uno por cada entrada)
             self.weights = rng.uniform(-1.0, 1.0, size=self.n_inputs)
         if bias is not None:
             self.bias = float(bias)
@@ -106,3 +108,5 @@ class Perceptron:
         fp = int(((y == 0) & (y_pred == 1)).sum())
         fn = int(((y == 1) & (y_pred == 0)).sum())
         return {"accuracy": acc, "tp": tp, "tn": tn, "fp": fp, "fn": fn}
+    
+    
